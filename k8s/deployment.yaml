@@ -1,0 +1,27 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: climatewavers-backend
+  labels:
+    app: climatewavers-backend
+    sandbox: olagoldhackxx
+    sandbox-olagoldhackxx: climatewavers-backend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: climatewavers-backend
+  template:
+    metadata:
+      labels:
+        app: climatewavers-backend
+    spec:
+      imagePullSecrets:
+        - name: quay-registry-secret
+      containers:
+        - name: climatewavers-backend
+          image: quay.io/olagoldhackxx/climatewavers-djangobackend:v1
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8000
+              protocol: TCP

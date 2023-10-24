@@ -1,0 +1,8 @@
+# Ignore system and temporary files
+.DS_Store
+.vscode/
+.myenv/
+node_modules/
+.env
+
+
