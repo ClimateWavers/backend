@@ -1,6 +1,5 @@
 # Climate Wavers - Django Server
 
-
 The Django Server component of the Climate Change and Disaster Response Platform is responsible for handling core functionalities, user management, and data processing tasks. Built on the Django web framework, this server provides a robust and secure backend for the application.
 
 ## Table of Contents
@@ -10,10 +9,11 @@ The Django Server component of the Climate Change and Disaster Response Platform
   - [Project Overview](#project-overview)
   - [Features](#features)
   - [Installation and Setup](#installation-and-setup)
+    - [Setting up a MariaDB Database](#setting-up-a-mariadb-database)
+    - [Starting MariaDB](#starting-mariadb)
   - [API Endpoints](#api-endpoints)
   - [Environment Variables](#environment-variables)
   - [License](#license)
-
 
 ## Project Overview
 
@@ -32,7 +32,7 @@ The Climate Change and Disaster Response Platform aims to monitor climate change
 1. **Clone the Repository:**
    ```bash
    git clone https://github.com/ClimateWavers/climatewaver_Django_back-end.git
-   cd Django_back-end
+   cd climatewavers_Django_back-end
    ```
 
 2. **Install Dependencies:**
@@ -61,8 +61,66 @@ The Climate Change and Disaster Response Platform aims to monitor climate change
 
    The Django server will be available at `http://localhost:8000`.
 
-## API Endpoints
+## Setting up a MariaDB Database
 
+### Install MariaDB
+If you haven't already, you need to install MariaDB on your server or local development environment. You can download MariaDB from the [official website](https://mariadb.org/).
+
+### Database Configuration
+1. Open your Django project's `settings.py`.
+2. Locate the `DATABASES` section.
+3. Configure the database settings. Here's an example configuration for MariaDB:
+
+   ```python
+   # ... (Your existing settings)
+   DATABASES = {
+       'default': {
+           'ENGINE': 'django.db.backends.mysql',
+           'NAME': 'your_database_name',
+           'USER': 'your_database_user',
+           'PASSWORD': 'your_database_password',
+           'HOST': 'localhost',  # Set the host where your MariaDB is running
+           'PORT': '3306',  # Default MariaDB port
+       }
+   }
+
+## Starting MariaDB
+
+### Start the MariaDB Server
+To start MariaDB, you can use the following command:
+
+```bash
+sudo service mariadb start
+```
+## Access MariaDB
+
+### Access the MariaDB Shell
+You can access the MariaDB shell by running the following command:
+
+```bash
+mysql -u your_database_user -p
+```
+### Create the Database
+Inside the MariaDB shell, you can create your database if it doesn't exist. Use the following SQL command:
+
+```bash
+CREATE DATABASE your_database_name;
+```
+
+### Grant Permissions
+To ensure the database user has appropriate permissions on the database, execute the following SQL command:
+
+```bash
+GRANT ALL PRIVILEGES ON your_database_name.* TO 'your_database_user'@'localhost' IDENTIFIED BY 'your_database_password';
+```
+
+### Exit MariaDB Shell
+To leave the MariaDB shell, simply type:
+
+```bash
+exit
+```
+## API Endpoints
 
 **API Documentation: ClimateWavers**
 
