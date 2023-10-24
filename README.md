@@ -32,7 +32,7 @@ The Climate Change and Disaster Response Platform aims to monitor climate change
 1. **Clone the Repository:**
    ```bash
    git clone https://github.com/ClimateWavers/climatewaver_Django_back-end.git
-   cd ClimateWavers
+   cd Django_back-end
    ```
 
 2. **Install Dependencies:**
