@@ -13,11 +13,9 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__))
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
@@ -29,7 +27,6 @@ SECRET_KEY = '13kl@xtukpwe&xj2xoysxe9_6=tf@f8ewxer5n&ifnd46+6$%8'
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
-
 
 # Application definition
 
@@ -43,7 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'rest_framework.authtoken',
-
+    'channels',  # Add 'channels' to your installed apps
 ]
 
 AUTH_USER_MODEL = "climate_wavers.User"
@@ -56,6 +53,16 @@ AUTHENTICATION_CLASSES = (
 
 # ...
 
+# Add the following channel layers configuration
+CHANNEL_LAYERS = {
+    "default": {
+        "BACKEND": "channels.layers.InMemoryChannelLayer",  # You can configure a different channel layer backend if needed
+    },
+}
+
+# Use channels for routing
+ASGI_APPLICATION = "climatewavers.routing.application"  # Use "climatewavers" as  project name
+
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': (
         'rest_framework.permissions.IsAuthenticated',
@@ -64,7 +71,6 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.TokenAuthentication',
     ),
 }
-
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -96,7 +102,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'climate_configure.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
@@ -112,7 +117,8 @@ DATABASES = {
 }
 
 AUTH_USER_MODEL = "climate_wavers.CustomUser"
-  # Sender email
+
+# Sender email
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
@@ -132,7 +138,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/3.0/topics/i18n/
 
@@ -146,14 +151,12 @@ USE_L10N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'climate_wavers/media')
 MEDIA_URL = '/media/'
-
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'  # Replace with your email provider's SMTP server
@@ -162,4 +165,3 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'climatewaver@gmail.com'  # Your email address
 EMAIL_HOST_PASSWORD = 'bujs ubnf nsui teht'  # Your email password
 DEFAULT_FROM_EMAIL = 'climatewaver@gmail.com'
-
