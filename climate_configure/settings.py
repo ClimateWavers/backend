@@ -62,8 +62,8 @@ CHANNEL_LAYERS = {
     },
 }
 
-# Use channels for routing
-ASGI_APPLICATION = "climatewavers.routing.application"  # Use "climatewavers" as  project name
+# Use channels for routing  
+ASGI_APPLICATION = "climate_configure.routing.application" # Use "climatewavers" as  project name
 
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': (
