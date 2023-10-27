@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'rest_framework.authtoken',
+    'django_rest_passwordreset',
     'channels',  # Add 'channels' to your installed apps
 ]
 
