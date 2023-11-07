@@ -21,7 +21,7 @@ The Climate Change and Disaster Response Platform aims to monitor climate change
 
 ## Features
 
-- **CustomUser Authentication:** Secure user registration, login, and profile management.
+- **User Authentication:** Secure user registration, login, and profile management.
 - **Data Management:** Store and manage user data, community information, and datasets.
 - **Real-time Data Processing:** Process incoming data streams for analysis and visualization.
 - **Collaborative Communities:** Enable users to form communities, share observations, and collaborate.
@@ -90,6 +90,7 @@ If you haven't already, you need to install MariaDB on your server or local deve
            'PORT': '3306',  # Default MariaDB port
        }
    }
+	```
 
 ## Starting MariaDB
 
