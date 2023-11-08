@@ -24,6 +24,7 @@ RUN /app/./make_migration.sh && /app/./migrate.sh
 # For more info, please refer to https://aka.ms/vscode-docker-python-configure-containers
 RUN adduser -u 5678 --disabled-password --gecos "" appuser && chown -R appuser /app
 USER appuser
+RUN chmod -R a+rwx /app
 
 # During debugging, this entry point will be overridden. For more information, please refer to https://aka.ms/vscode-docker-python-debug
 CMD ["gunicorn", "--workers=3", "--bind=0.0.0.0:8080", "climate_configure.wsgi:application"]
