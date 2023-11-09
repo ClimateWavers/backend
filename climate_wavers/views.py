@@ -13,6 +13,7 @@ from .serializers import UserSerializer, PostSerializer, CommentSerializer, Foll
 from rest_framework_simplejwt.tokens import RefreshToken
 from django.db.models import Q
 from itsdangerous import URLSafeTimedSerializer
+import json
 
 
 # Secret key to sign the confirmation token
@@ -140,8 +141,9 @@ def register(request):
             recipient_list = [user.email]
 
             send_mail(subject, message, from_email, recipient_list)
-
-            return JsonResponse({'message': 'User registered. Confirmation email sent.', "id": user.id, "confirmation_url": confirmation_url, "token": str(token)}, status=status.HTTP_201_CREATED)
+            print("here")
+            token = str(token)
+            return JsonResponse({'message': 'User registered. Confirmation email sent.', "id": user.id, "confirmation_url": confirmation_url, "token": token}, status=status.HTTP_201_CREATED)
         except Exception as e:
             logger.error(e)
             print(e)

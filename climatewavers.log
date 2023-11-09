@@ -1,1 +1,9 @@
 2023-11-09 16:34:58,353 - WARNING - django.request - Unsupported Media Type: /api/v1/backend/register
+2023-11-09 17:04:39,265 - ERROR - climatewavers - 'str' object has no attribute 'read'
+2023-11-09 17:04:39,268 - WARNING - django.request - Bad Request: /api/v1/backend/register
+2023-11-09 17:05:01,396 - INFO - django.utils.autoreload - /home/olagold-hackxx/Projects/Portfolio/backend/climate_wavers/views.py changed, reloading.
+2023-11-09 17:05:05,058 - ERROR - climatewavers - (1062, "Duplicate entry 'tehssmdt@eteest' for key 'user.email'")
+2023-11-09 17:05:05,060 - WARNING - django.request - Bad Request: /api/v1/backend/register
+2023-11-09 17:05:58,705 - INFO - django.utils.autoreload - /home/olagold-hackxx/Projects/Portfolio/backend/climate_wavers/views.py changed, reloading.
+2023-11-09 17:06:02,984 - ERROR - climatewavers - (1062, "Duplicate entry 'tehssmdt@eeteest' for key 'user.email'")
+2023-11-09 17:06:02,985 - WARNING - django.request - Bad Request: /api/v1/backend/register
