@@ -2424,3 +2424,63 @@ AttributeError: 'NoneType' object has no attribute 'encode'
 2023-11-07 13:06:48,087 - INFO - django.utils.autoreload - /home/olagold-hackxx/Projects/Portfolio/ClimateWavers2/climate_wavers/views.py changed, reloading.
 2023-11-07 13:07:31,411 - INFO - django.utils.autoreload - /home/olagold-hackxx/Projects/Portfolio/ClimateWavers2/climate_wavers/views.py changed, reloading.
 2023-11-07 13:08:08,517 - INFO - django.utils.autoreload - /home/olagold-hackxx/Projects/Portfolio/ClimateWavers2/climate_wavers/views.py changed, reloading.
+2023-11-08 06:08:14,813 - WARNING - django.request - Unsupported Media Type: /api/v1/backend/register
+2023-11-08 06:08:20,006 - WARNING - django.request - Unsupported Media Type: /api/v1/backend/register
+2023-11-08 06:08:21,405 - WARNING - django.request - Unsupported Media Type: /api/v1/backend/register
+2023-11-08 06:10:33,041 - ERROR - climatewavers - (1054, "Unknown column 'is_linkedin_user' in 'field list'")
+2023-11-08 06:10:33,041 - WARNING - django.request - Bad Request: /api/v1/backend/register
+2023-11-08 06:12:44,651 - WARNING - django.request - Unsupported Media Type: /api/v1/backend/register
+2023-11-08 06:13:28,789 - ERROR - climatewavers - (1054, "Unknown column 'is_linkedin_user' in 'field list'")
+2023-11-08 06:13:28,790 - WARNING - django.request - Bad Request: /api/v1/backend/register
+2023-11-08 19:13:25,323 - WARNING - django.request - Method Not Allowed: /api/v1/backend/register
+2023-11-08 19:14:50,616 - WARNING - django.request - Unsupported Media Type: /api/v1/backend/register
+2023-11-08 19:21:05,859 - ERROR - climatewavers - (1054, "Unknown column 'is_linkedin_user' in 'field list'")
+2023-11-08 19:21:05,860 - WARNING - django.request - Bad Request: /api/v1/backend/register
+2023-11-08 19:21:44,817 - ERROR - climatewavers - (1054, "Unknown column 'is_linkedin_user' in 'field list'")
+2023-11-08 19:21:44,818 - WARNING - django.request - Bad Request: /api/v1/backend/register
+2023-11-08 19:21:57,741 - ERROR - climatewavers - (1054, "Unknown column 'is_linkedin_user' in 'field list'")
+2023-11-08 19:21:57,741 - WARNING - django.request - Bad Request: /api/v1/backend/register
+2023-11-08 19:22:07,672 - ERROR - climatewavers - (1054, "Unknown column 'is_linkedin_user' in 'field list'")
+2023-11-08 19:22:07,672 - WARNING - django.request - Bad Request: /api/v1/backend/register
+2023-11-08 19:22:22,555 - ERROR - climatewavers - (1054, "Unknown column 'is_linkedin_user' in 'field list'")
+2023-11-08 19:22:22,555 - WARNING - django.request - Bad Request: /api/v1/backend/register
+2023-11-08 19:22:53,858 - ERROR - climatewavers - (1054, "Unknown column 'is_linkedin_user' in 'field list'")
+2023-11-08 19:22:53,858 - WARNING - django.request - Bad Request: /api/v1/backend/register
+2023-11-08 19:25:53,108 - ERROR - climatewavers - (1054, "Unknown column 'is_linkedin_user' in 'field list'")
+2023-11-08 19:25:53,109 - WARNING - django.request - Bad Request: /api/v1/backend/register
+2023-11-08 19:26:05,418 - ERROR - climatewavers - (1054, "Unknown column 'is_linkedin_user' in 'field list'")
+2023-11-08 19:26:05,418 - WARNING - django.request - Bad Request: /api/v1/backend/register
+2023-11-08 19:28:20,934 - ERROR - climatewavers - (1054, "Unknown column 'is_linkedin_user' in 'field list'")
+2023-11-08 19:28:20,935 - WARNING - django.request - Bad Request: /api/v1/backend/register
+2023-11-08 19:34:46,380 - WARNING - django.request - Unsupported Media Type: /api/v1/backend/register
+2023-11-08 19:37:23,186 - WARNING - django.request - Unsupported Media Type: /api/v1/backend/register
+2023-11-08 19:37:31,023 - WARNING - django.request - Unsupported Media Type: /api/v1/backend/register
+2023-11-08 19:37:38,689 - WARNING - django.request - Unsupported Media Type: /api/v1/backend/register
+2023-11-08 19:37:44,383 - WARNING - django.request - Unsupported Media Type: /api/v1/backend/register
+2023-11-08 19:39:04,900 - WARNING - django.request - Unsupported Media Type: /api/v1/backend/register
+2023-11-08 19:39:35,892 - WARNING - django.request - Method Not Allowed: /api/v1/backend/register
+2023-11-08 19:39:44,355 - WARNING - django.request - Method Not Allowed: /api/v1/backend/register
+2023-11-08 19:39:45,909 - WARNING - django.request - Method Not Allowed: /api/v1/backend/register
+2023-11-08 19:39:50,439 - ERROR - climatewavers - (1054, "Unknown column 'is_linkedin_user' in 'field list'")
+2023-11-08 19:39:50,440 - WARNING - django.request - Bad Request: /api/v1/backend/register
+2023-11-08 19:39:54,574 - WARNING - django.request - Unsupported Media Type: /api/v1/backend/register
+2023-11-08 23:50:43,040 - ERROR - climatewavers - (1054, "Unknown column 'is_linkedin_user' in 'field list'")
+2023-11-08 23:50:43,054 - WARNING - django.request - Bad Request: /api/v1/backend/register
+2023-11-09 07:56:13,337 - ERROR - climatewavers - (1054, "Unknown column 'is_linkedin_user' in 'field list'")
+2023-11-09 07:56:13,339 - WARNING - django.request - Bad Request: /api/v1/backend/register
+2023-11-09 07:56:14,994 - ERROR - climatewavers - (1054, "Unknown column 'is_linkedin_user' in 'field list'")
+2023-11-09 07:56:14,995 - WARNING - django.request - Bad Request: /api/v1/backend/register
+2023-11-09 09:18:36,581 - WARNING - django.request - Unsupported Media Type: /api/v1/backend/register
+2023-11-09 11:22:54,356 - WARNING - django.request - Unsupported Media Type: /api/v1/backend/register
+2023-11-09 11:23:07,573 - ERROR - climatewavers - (1054, "Unknown column 'is_linkedin_user' in 'field list'")
+2023-11-09 11:23:07,578 - WARNING - django.request - Bad Request: /api/v1/backend/register
+2023-11-09 11:23:27,278 - ERROR - climatewavers - (1054, "Unknown column 'is_linkedin_user' in 'field list'")
+2023-11-09 11:23:27,278 - WARNING - django.request - Bad Request: /api/v1/backend/register
+2023-11-09 11:24:30,099 - ERROR - climatewavers - (1054, "Unknown column 'is_linkedin_user' in 'field list'")
+2023-11-09 11:24:30,100 - WARNING - django.request - Bad Request: /api/v1/backend/register
+2023-11-09 11:24:32,325 - ERROR - climatewavers - (1054, "Unknown column 'is_linkedin_user' in 'field list'")
+2023-11-09 11:24:32,325 - WARNING - django.request - Bad Request: /api/v1/backend/register
+2023-11-09 11:24:33,922 - ERROR - climatewavers - (1054, "Unknown column 'is_linkedin_user' in 'field list'")
+2023-11-09 11:24:33,923 - WARNING - django.request - Bad Request: /api/v1/backend/register
+2023-11-09 11:25:10,765 - ERROR - climatewavers - (1054, "Unknown column 'is_linkedin_user' in 'field list'")
+2023-11-09 11:25:10,767 - WARNING - django.request - Bad Request: /api/v1/backend/register

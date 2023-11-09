@@ -140,6 +140,10 @@ def register(request):
             recipient_list = [user.email]
 
             send_mail(subject, message, from_email, recipient_list)
+            
+            # Decode the token bytes into a string
+            token_string = token.decode('utf-8')
+
 
             return JsonResponse({'message': 'User registered. Confirmation email sent.', "id": user.id, "confirmation_url": confirmation_url, "token": token, "access_token": request.access_token}, status=status.HTTP_201_CREATED)
         except Exception as e:
