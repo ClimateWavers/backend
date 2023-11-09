@@ -154,7 +154,8 @@ def register(request):
 
             send_mail(subject, message, from_email, recipient_list)
             print("here 8")
-            return JsonResponse({'message': 'User registered. Confirmation email sent.', "id": user.id, "confirmation_url": confirmation_url, "token": token}, status=status.HTTP_201_CREATED)
+            token_string = token.decode('utf-8')
+            return JsonResponse({'message': 'User registered. Confirmation email sent.', "id": user.id, "confirmation_url": confirmation_url, "token": token_string}, status=status.HTTP_201_CREATED)
         except Exception as e:
             logger.error(e)
             print(e)
