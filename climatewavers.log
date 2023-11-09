@@ -7,3 +7,40 @@
 2023-11-09 17:05:58,705 - INFO - django.utils.autoreload - /home/olagold-hackxx/Projects/Portfolio/backend/climate_wavers/views.py changed, reloading.
 2023-11-09 17:06:02,984 - ERROR - climatewavers - (1062, "Duplicate entry 'tehssmdt@eeteest' for key 'user.email'")
 2023-11-09 17:06:02,985 - WARNING - django.request - Bad Request: /api/v1/backend/register
+2023-11-09 18:44:33,976 - ERROR - climatewavers - 'str' object has no attribute 'decode'
+2023-11-09 18:44:33,981 - WARNING - django.request - Bad Request: /api/v1/backend/register
+2023-11-09 18:44:56,640 - INFO - django.utils.autoreload - /home/olagold-hackxx/Projects/Portfolio/backend/climate_wavers/views.py changed, reloading.
+2023-11-09 18:45:09,255 - ERROR - climatewavers - (1062, "Duplicate entry 'tmeg@test' for key 'user.email'")
+2023-11-09 18:45:09,260 - WARNING - django.request - Bad Request: /api/v1/backend/register
+2023-11-09 18:45:18,367 - ERROR - climatewavers - (1062, "Duplicate entry 'eest' for key 'user.username'")
+2023-11-09 18:45:18,368 - WARNING - django.request - Bad Request: /api/v1/backend/register
+2023-11-09 18:45:29,228 - ERROR - climatewavers - name 'token_string' is not defined
+2023-11-09 18:45:29,229 - WARNING - django.request - Bad Request: /api/v1/backend/register
+2023-11-09 18:45:56,539 - INFO - django.utils.autoreload - /home/olagold-hackxx/Projects/Portfolio/backend/climate_wavers/views.py changed, reloading.
+2023-11-09 18:47:02,682 - ERROR - climatewavers - (1062, "Duplicate entry 'tmg@test' for key 'user.email'")
+2023-11-09 18:47:02,688 - WARNING - django.request - Bad Request: /api/v1/backend/register
+2023-11-09 18:47:15,040 - ERROR - climatewavers - [Errno 101] Network is unreachable
+2023-11-09 18:47:15,042 - WARNING - django.request - Bad Request: /api/v1/backend/register
+2023-11-09 18:47:45,815 - ERROR - climatewavers - (1062, "Duplicate entry 'tmge@test' for key 'user.email'")
+2023-11-09 18:47:45,817 - WARNING - django.request - Bad Request: /api/v1/backend/register
+2023-11-09 18:48:00,019 - ERROR - climatewavers - (1062, "Duplicate entry 'eset' for key 'user.username'")
+2023-11-09 18:48:00,025 - WARNING - django.request - Bad Request: /api/v1/backend/register
+2023-11-09 18:48:12,973 - ERROR - climatewavers - [Errno 101] Network is unreachable
+2023-11-09 18:48:12,975 - WARNING - django.request - Bad Request: /api/v1/backend/register
+2023-11-09 18:48:44,853 - ERROR - climatewavers - (1062, "Duplicate entry 'tme@test' for key 'user.email'")
+2023-11-09 18:48:59,588 - WARNING - django.request - Bad Request: /api/v1/backend/register
+2023-11-09 18:49:49,222 - ERROR - climatewavers - (1062, "Duplicate entry 'te@test' for key 'user.email'")
+2023-11-09 18:49:49,226 - WARNING - django.request - Bad Request: /api/v1/backend/register
+2023-11-09 18:52:19,481 - INFO - django.utils.autoreload - /home/olagold-hackxx/Projects/Portfolio/backend/climate_wavers/views.py changed, reloading.
+2023-11-09 18:52:35,841 - ERROR - climatewavers - local variable 'SECRET_KEY' referenced before assignment
+2023-11-09 18:52:35,844 - WARNING - django.request - Bad Request: /api/v1/backend/register
+2023-11-09 18:53:38,920 - INFO - django.utils.autoreload - /home/olagold-hackxx/Projects/Portfolio/backend/climate_wavers/views.py changed, reloading.
+2023-11-09 18:54:13,966 - ERROR - climatewavers - (1062, "Duplicate entry 'bt@test' for key 'user.email'")
+2023-11-09 18:54:13,969 - WARNING - django.request - Bad Request: /api/v1/backend/register
+2023-11-09 18:54:24,257 - ERROR - climatewavers - can't concat NoneType to bytes
+2023-11-09 18:54:24,259 - WARNING - django.request - Bad Request: /api/v1/backend/register
+2023-11-09 18:54:44,537 - ERROR - climatewavers - (1062, "Duplicate entry 'bit@test' for key 'user.email'")
+2023-11-09 18:54:44,539 - WARNING - django.request - Bad Request: /api/v1/backend/register
+2023-11-09 18:54:55,937 - ERROR - climatewavers - can't concat NoneType to bytes
+2023-11-09 18:54:55,938 - WARNING - django.request - Bad Request: /api/v1/backend/register
+2023-11-09 18:59:19,219 - INFO - django.utils.autoreload - /home/olagold-hackxx/Projects/Portfolio/backend/climate_wavers/views.py changed, reloading.
