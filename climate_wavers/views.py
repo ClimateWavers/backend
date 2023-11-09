@@ -124,25 +124,35 @@ def register(request):
 
             # Generate a confirmation token for the user
             user_id = str(user.id)
+            print(user.id)
             token = serializer.dumps(user_id.encode('utf-8'))
+            print(token)
             uid = urlsafe_base64_encode(force_bytes(user.pk))
+            print(f'uid {uid}')
 
             # Build the confirmation URL
             domain = os.getenv("DOMAIN")
+            print(domain)
             confirmation_url = reverse('confirm-registration',
                 kwargs={'uidb64': uid, 'token': token})
+            print("here")
             confirmation_url = f'{domain}{confirmation_url}'
+            print("here 2")
             confirmation_page = os.getenv("CONFIRMATION_PAGE")
+            print("here 3")
 
             # Send a confirmation email
             subject = 'Confirm Your Registration'
+            print("here 4")
             message = f'{os.getenv("VERIFICATION_MAIL")} {confirmation_page}/{token}'
+            print("here 5")
             from_email = os.getenv("APP_EMAIL")  # Replace with your email
+            print("here 6")
             recipient_list = [user.email]
+            print("here 7")
 
             send_mail(subject, message, from_email, recipient_list)
-            print("here")
-            token = str(token)
+            print("here 8")
             return JsonResponse({'message': 'User registered. Confirmation email sent.', "id": user.id, "confirmation_url": confirmation_url, "token": token}, status=status.HTTP_201_CREATED)
         except Exception as e:
             logger.error(e)
