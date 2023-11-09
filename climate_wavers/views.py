@@ -141,10 +141,11 @@ def register(request):
 
             send_mail(subject, message, from_email, recipient_list)
 
-            return JsonResponse({'message': 'User registered. Confirmation email sent.', "id": user.id, "confirmation_url": confirmation_url, "token": token, "access_token": request.access_token}, status=status.HTTP_201_CREATED)
+            return JsonResponse({'message': 'User registered. Confirmation email sent.', "id": user.id, "confirmation_url": confirmation_url, "token": token}, status=status.HTTP_201_CREATED)
         except Exception as e:
             logger.error(e)
-            return JsonResponse({"message": "Username or email already taken."}, status=status.HTTP_400_BAD_REQUEST)
+            print(e)
+            return JsonResponse({"message": str(e)}, status=status.HTTP_400_BAD_REQUEST)
 
     return JsonResponse(status=status.HTTP_405_METHOD_NOT_ALLOWED)
 
