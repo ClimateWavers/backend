@@ -125,7 +125,10 @@ def register(request):
             # Generate a confirmation token for the user
             user_id = str(user.id)
             print(user.id)
-            token = serializer.dumps(user_id.encode('utf-8'))
+            user_id_bytes = user_id.encode('utf-8')
+            # Convert bytes to string
+            user_id_string = user_id_bytes.decode('utf-8')
+            token = serializer.dumps(user_id_string.encode('utf-8'))
             print("here")
             uid = urlsafe_base64_encode(force_bytes(user.pk))
             # Build the confirmation URL
