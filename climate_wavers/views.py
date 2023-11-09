@@ -123,16 +123,14 @@ def register(request):
 
             # Generate a confirmation token for the user
             user_id = str(user.id)
-            token = serializer.dumps(user_id.encode('utf-8'))
-            uid = urlsafe_base64_encode(force_bytes(user.pk))
-
+            token = serializer.dumps(user_id)
+            uid = urlsafe_base64_encode(force_bytes(user_id))
             # Build the confirmation URL
             domain = os.getenv("DOMAIN")
             confirmation_url = reverse('confirm-registration',
                 kwargs={'uidb64': uid, 'token': token})
             confirmation_url = f'{domain}{confirmation_url}'
             confirmation_page = os.getenv("CONFIRMATION_PAGE")
-
             # Send a confirmation email
             subject = 'Confirm Your Registration'
             message = f'{os.getenv("VERIFICATION_MAIL")} {confirmation_page}/{token}'
@@ -140,15 +138,20 @@ def register(request):
             recipient_list = [user.email]
 
             send_mail(subject, message, from_email, recipient_list)
+<<<<<<< HEAD
             
             # Decode the token bytes into a string
             token_string = token.decode('utf-8')
 
 
             return JsonResponse({'message': 'User registered. Confirmation email sent.', "id": user.id, "confirmation_url": confirmation_url, "token": token, "access_token": request.access_token}, status=status.HTTP_201_CREATED)
+=======
+            return JsonResponse({'message': 'User registered. Confirmation email sent.', "id": user.id, "confirmation_url": confirmation_url, "token": token}, status=status.HTTP_201_CREATED)
+>>>>>>> d3c8c40c5e566d2e5009c762ee09b88babcb1be4
         except Exception as e:
             logger.error(e)
-            return JsonResponse({"message": "Username or email already taken."}, status=status.HTTP_400_BAD_REQUEST)
+            print(e)
+            return JsonResponse({"message": str(e)}, status=status.HTTP_400_BAD_REQUEST)
 
     return JsonResponse(status=status.HTTP_405_METHOD_NOT_ALLOWED)
 
@@ -768,7 +771,7 @@ def password_reset(request):
         if user is not None:
             # Generate a reset token for the user
             user_id = str(user.id)
-            token = serializer.dumps(user_id.encode('utf-8'))
+            token = serializer.dumps(user_id)
             uid = urlsafe_base64_encode(force_bytes(user.pk))
 
             # Build the reset password URL

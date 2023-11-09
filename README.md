@@ -33,8 +33,8 @@ The Climate Change and Disaster Response Platform aims to monitor climate change
 
 1. **Clone the Repository:**
    ```bash
-   git clone https://github.com/IsmaelKiprop/ClimateWavers.git
-   cd ClimateWavers
+   https://github.com/ClimateWavers/backend.git
+   cd backend
    ```
 2. **Create virtual environment:**
   ```bash
@@ -68,7 +68,7 @@ The Climate Change and Disaster Response Platform aims to monitor climate change
    python manage.py runserver
    ```
 
-   The Django server will be available at `http://localhost:8000`.
+   The Django server will be available at `http://localhost:8001`.
 
 ## Setting up a MariaDB Database
 
