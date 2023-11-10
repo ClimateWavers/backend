@@ -762,7 +762,7 @@ def password_reset(request):
         if user is not None:
             # Generate a reset token for the user
             user_id = str(user.id)
-            token = serializer.dumps(user_id.encode('utf-8'))
+            token = serializer.dumps(user_id)
             uid = urlsafe_base64_encode(force_bytes(user.pk))
 
             # Build the reset password URL
