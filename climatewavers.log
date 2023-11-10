@@ -1,0 +1,6 @@
+2023-11-10 01:09:35,023 - WARNING - django.request - Bad Request: /api/v1/backend/login
+2023-11-10 01:09:54,785 - INFO - climatewavers - argument of type 'NoneType' is not iterable
+2023-11-10 01:09:54,787 - WARNING - django.request - Unauthorized: /api/v1/backend/login
+2023-11-10 01:10:42,738 - INFO - climatewavers - argument of type 'NoneType' is not iterable
+2023-11-10 01:10:42,740 - WARNING - django.request - Unauthorized: /api/v1/backend/login
+2023-11-10 01:19:35,667 - INFO - django.utils.autoreload - /home/olagold-hackxx/Projects/Portfolio/backend/climate_wavers/views.py changed, reloading.
