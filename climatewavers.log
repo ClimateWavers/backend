@@ -44,3 +44,19 @@
 2023-11-09 18:54:55,937 - ERROR - climatewavers - can't concat NoneType to bytes
 2023-11-09 18:54:55,938 - WARNING - django.request - Bad Request: /api/v1/backend/register
 2023-11-09 18:59:19,219 - INFO - django.utils.autoreload - /home/olagold-hackxx/Projects/Portfolio/backend/climate_wavers/views.py changed, reloading.
+2023-11-09 19:31:41,153 - ERROR - climatewavers - [Errno 101] Network is unreachable
+2023-11-09 19:31:41,157 - WARNING - django.request - Bad Request: /api/v1/backend/register
+2023-11-09 19:31:45,700 - ERROR - climatewavers - (1062, "Duplicate entry 'bbn@test' for key 'user.email'")
+2023-11-09 19:31:45,702 - WARNING - django.request - Bad Request: /api/v1/backend/register
+2023-11-09 19:32:00,814 - ERROR - climatewavers - [Errno 101] Network is unreachable
+2023-11-09 19:32:00,822 - WARNING - django.request - Bad Request: /api/v1/backend/register
+2023-11-09 19:32:03,875 - ERROR - climatewavers - (1062, "Duplicate entry 'bn@test' for key 'user.email'")
+2023-11-09 19:32:03,877 - WARNING - django.request - Bad Request: /api/v1/backend/register
+2023-11-09 19:33:55,338 - ERROR - climatewavers - [Errno 101] Network is unreachable
+2023-11-09 19:33:55,340 - WARNING - django.request - Bad Request: /api/v1/backend/register
+2023-11-09 19:33:58,721 - ERROR - climatewavers - (1062, "Duplicate entry 'b8@test' for key 'user.email'")
+2023-11-09 19:33:58,723 - WARNING - django.request - Bad Request: /api/v1/backend/register
+2023-11-09 19:34:31,112 - INFO - django.utils.autoreload - /home/olagold-hackxx/Projects/Portfolio/backend/climate_wavers/views.py changed, reloading.
+2023-11-09 19:34:42,337 - ERROR - climatewavers - (1062, "Duplicate entry 'b8@test' for key 'user.email'")
+2023-11-09 19:34:42,341 - WARNING - django.request - Bad Request: /api/v1/backend/register
+2023-11-09 19:35:36,967 - INFO - django.utils.autoreload - /home/olagold-hackxx/Projects/Portfolio/backend/climate_wavers/views.py changed, reloading.

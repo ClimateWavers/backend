@@ -123,10 +123,8 @@ def register(request):
 
             # Generate a confirmation token for the user
             user_id = str(user.id)
-            print("here")
-            print(os.getenv("SECRET_KEY"))
-            token = serializer.dumps(user_id.encode('utf-8'))
-            uid = urlsafe_base64_encode(force_bytes(user.pk))
+            token = serializer.dumps(user_id)
+            uid = urlsafe_base64_encode(force_bytes(user_id))
             # Build the confirmation URL
             domain = os.getenv("DOMAIN")
             confirmation_url = reverse('confirm-registration',
