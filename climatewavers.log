@@ -4,3 +4,24 @@
 2023-11-10 01:10:42,738 - INFO - climatewavers - argument of type 'NoneType' is not iterable
 2023-11-10 01:10:42,740 - WARNING - django.request - Unauthorized: /api/v1/backend/login
 2023-11-10 01:19:35,667 - INFO - django.utils.autoreload - /home/olagold-hackxx/Projects/Portfolio/backend/climate_wavers/views.py changed, reloading.
+2023-11-10 01:43:36,026 - ERROR - climatewavers - User matching query does not exist.
+2023-11-10 01:44:12,067 - ERROR - climatewavers - User matching query does not exist.
+2023-11-10 01:45:43,549 - ERROR - climatewavers - User matching query does not exist.
+2023-11-10 01:46:09,241 - ERROR - climatewavers - User matching query does not exist.
+2023-11-10 01:46:09,242 - WARNING - django.request - Bad Request: /api/v1/backend/de8650c3f0bf/verify
+2023-11-10 01:49:26,134 - INFO - django.utils.autoreload - /home/olagold-hackxx/Projects/Portfolio/backend/climate_wavers/views.py changed, reloading.
+2023-11-10 01:50:15,260 - INFO - django.utils.autoreload - /home/olagold-hackxx/Projects/Portfolio/backend/climate_wavers/views.py changed, reloading.
+2023-11-10 01:51:41,305 - ERROR - climatewavers - Field name `is_staff` is not valid for model `User`.
+2023-11-10 01:52:28,998 - INFO - django.utils.autoreload - /home/olagold-hackxx/Projects/Portfolio/backend/climate_wavers/views.py changed, reloading.
+2023-11-10 01:52:35,819 - ERROR - climatewavers - Field name `is_staff` is not valid for model `User`.
+2023-11-10 01:53:04,250 - INFO - django.utils.autoreload - /home/olagold-hackxx/Projects/Portfolio/backend/climate_wavers/views.py changed, reloading.
+2023-11-10 01:53:10,287 - ERROR - climatewavers - Field name `is_staff` is not valid for model `User`.
+2023-11-10 01:55:26,128 - INFO - django.utils.autoreload - /home/olagold-hackxx/Projects/Portfolio/backend/climate_wavers/views.py changed, reloading.
+2023-11-10 01:55:35,427 - ERROR - climatewavers - Field name `is_staff` is not valid for model `User`.
+2023-11-10 01:56:00,481 - INFO - django.utils.autoreload - /home/olagold-hackxx/Projects/Portfolio/backend/climate_wavers/serializers.py changed, reloading.
+2023-11-10 01:56:18,709 - ERROR - climatewavers - Field name `is_staff` is not valid for model `User`.
+2023-11-10 01:57:51,328 - INFO - django.utils.autoreload - /home/olagold-hackxx/Projects/Portfolio/backend/climate_wavers/views.py changed, reloading.
+2023-11-10 01:57:58,507 - ERROR - climatewavers - Field name `is_staff` is not valid for model `User`.
+2023-11-10 01:59:07,455 - INFO - django.utils.autoreload - /home/olagold-hackxx/Projects/Portfolio/backend/climate_wavers/serializers.py changed, reloading.
+2023-11-10 01:59:27,101 - ERROR - climatewavers - Object of type RefreshToken is not JSON serializable
+2023-11-10 01:59:50,162 - INFO - django.utils.autoreload - /home/olagold-hackxx/Projects/Portfolio/backend/climate_wavers/views.py changed, reloading.
