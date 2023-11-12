@@ -4,8 +4,6 @@ The Django Server microservice of Climate wavers is responsible for handling cor
 
 ## Table of Contents
 
-- [Climate Wavers - Django Server](#climate-wavers---django-server)
-  - [Table of Contents](#table-of-contents)
   - [Project Overview](#project-overview)
   - [Features](#features)
   - [Setting up a MariaDB Database](#setting-up-a-mariadb-database)
