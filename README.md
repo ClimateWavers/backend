@@ -69,10 +69,8 @@ The Climate Change and Disaster Response Platform aims to monitor climate change
 
    The Django server will be available at `http://localhost:8001`.
 
-## Setting up a MariaDB Database
-
-### Install MariaDB
-If you haven't already, you need to install MariaDB on your server or local development environment. You can download MariaDB from the [official website](https://mariadb.org/).
+## Setup MariaDB
+To start MariaDB, refer to the database microservice repository `https://github.com/ClimateWavers/database` or the branch - database, at development repository `https://github.com/Olagold-hackxx/ClimateWavers`
 
 ### Database Configuration
 1. Open your Django project's `settings.py`.
@@ -87,14 +85,10 @@ If you haven't already, you need to install MariaDB on your server or local deve
            'NAME': 'your_database_name',
            'USER': 'your_database_user',
            'PASSWORD': 'your_database_password',
-           'HOST': 'localhost',  # Set the host where your MariaDB is running
+           'HOST': 'localhost or deployment service name',  # Set the host where your MariaDB is running
            'PORT': '3306',  # Default MariaDB port
        }
    }
-	```
-
-## Setup MariaDB
-To start MariaDB, refer to the database microservice repository `https://github.com/ClimateWavers/database` or the branch - database, at development repository `https://github.com/Olagold-hackxx/ClimateWavers`
     
 ## Environment Variables
 
