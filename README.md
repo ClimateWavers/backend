@@ -13,6 +13,7 @@ The Django Server microservice of Climate wavers is responsible for handling cor
   - [Setting up a MariaDB Database](#setting-up-a-mariadb-database)
   - [Installation and Setup](#installation-and-setup)
   - [Environment Variables](#environment-variables)
+  - [Deployment](#deployment)
   - [License](#license)
 
 ## Project Overview
@@ -22,7 +23,7 @@ The Climate Change and Disaster Response Platform aims to monitor climate change
 ## Features
 
 - **User Authentication:** Secure user registration, login, and profile management.
-- **Data Management:** Store and manage user data, community information, and datasets.
+- **Data Management:** Store and manage user data, community information, and other data for application.
 - **Real-time Data Processing:** Process incoming data streams for analysis and visualization.
 - **Collaborative Communities:** Enable users to form communities, share observations, and collaborate.
 - **API Endpoints:** Provides RESTful APIs for frontend interaction and external integrations.
