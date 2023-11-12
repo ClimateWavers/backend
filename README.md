@@ -2,7 +2,7 @@
 
 <img width="1000" alt="image" src="https://github.com/Olagold-hackxx/ClimateWavers2/assets/133222922/bd3a5667-d3cd-48d9-b6d6-c8ac673dd49f">
 
-The Django Server component of the Climate Change and Disaster Response Platform is responsible for handling core functionalities, user management, and data processing tasks. Built on the Django web framework, this server provides a robust and secure backend for the application.
+The Django Server microservice of Climate wavers is responsible for handling core functionalities, user management, and data processing tasks. Built on the Django rest framework, this server provides a robust and secure backend for the application.
 
 ## Table of Contents
 
@@ -13,7 +13,6 @@ The Django Server component of the Climate Change and Disaster Response Platform
   - [Installation and Setup](#installation-and-setup)
     - [Setting up a MariaDB Database](#setting-up-a-mariadb-database)
     - [Starting MariaDB](#starting-mariadb)
-  - [API Endpoints](#api-endpoints)
   - [Environment Variables](#environment-variables)
   - [License](#license)
 
@@ -94,66 +93,23 @@ If you haven't already, you need to install MariaDB on your server or local deve
    }
 	```
 
-## Starting MariaDB
-
-### Start the MariaDB Server
-To start MariaDB, you can use the following command:
-
-```bash
-sudo service mariadb start
-```
-## Access MariaDB
-
-### Access the MariaDB Shell
-You can access the MariaDB shell by running the following command:
-
-```bash
-mysql -u your_database_user -p
-```
-### Create the Database
-Inside the MariaDB shell, you can create your database if it doesn't exist. Use the following SQL command:
-
-```bash
-CREATE DATABASE your_database_name;
-```
-
-### Grant Permissions
-To ensure the database user has appropriate permissions on the database, execute the following SQL command:
-
-```bash
-GRANT ALL PRIVILEGES ON your_database_name.* TO 'your_database_user'@'localhost' IDENTIFIED BY 'your_database_password';
-```
-
-### Exit MariaDB Shell
-To leave the MariaDB shell, simply type:
-
-```bash
-exit
-```
-## API Endpoints
-
-# Climate Wavers API Documentation
-
-This documentation outlines the API endpoints for the Climate Wavers application. Climate Wavers is a social platform where users can share posts, interact with other users, and follow their favorite content creators. The API provides various features, including user management, post creation, likes, comments, and more.
-
-## Authentication
-
-Before using the Climate Wavers API, users must register and log in to obtain an access token. The access token should be included in the headers of all API requests for authentication. In addition, some endpoints require user verification and authorization.
-
-## Base URL
-
-`https://backend-climatewavers-dev.apps.sandbox-m2.ll9k.p1.openshiftapps.com/api/v1/backend/`
-
-
-All endpoints are relative to this base URL.
-
+## Setup MariaDB
+To start MariaDB, refer to the database microservice repository `https://github.com/ClimateWavers/database` or the branch - database, at development repository `https://github.com/Olagold-hackxx/ClimateWavers`
     
 ## Environment Variables
 
-- **SECRET_KEY:** Django secret key for security (store in a secure environment).
+- **SECRET_KEY:** Django secret key for security 
 - **DEBUG:** Set to `True` for development, `False` for production.
-- **DATABASE_URL:** Database connection URL for MYSQL databases.
 - **ALLOWED_HOSTS:** List of allowed hostnames for the Django server.
+-  **MARIADB_PASSWORD:** Database Password
+-  **MARIADB_USER:** Database user
+-  **VERIFICATION_MAIL:** Personalized verification mail
+-  **DOMAIN:** Application domain or frontend url
+-  **APP_EMAIL:** Application email
+-  **MARIADB_DB_NAME:** Database name
+-  **MARIADB_PORT:** Database port, 3306 default value for mariadb
+-  **MARIADB_SERVER:** Database host, localhost on development environment, database service name on openshift cluster
+-  **BACKEND:** 
 
 
 ## License
