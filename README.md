@@ -10,9 +10,8 @@ The Django Server microservice of Climate wavers is responsible for handling cor
   - [Table of Contents](#table-of-contents)
   - [Project Overview](#project-overview)
   - [Features](#features)
+  - [Setting up a MariaDB Database](#setting-up-a-mariadb-database)
   - [Installation and Setup](#installation-and-setup)
-    - [Setting up a MariaDB Database](#setting-up-a-mariadb-database)
-    - [Starting MariaDB](#starting-mariadb)
   - [Environment Variables](#environment-variables)
   - [License](#license)
 
@@ -39,7 +38,7 @@ The Climate Change and Disaster Response Platform aims to monitor climate change
   ```bash
   python3 -m venv myenv -- "Name of the virtual environment"
   ```
-  - Activate virtual environment:
+   -  Activate virtual environment:
   ```bash
   source myenv/bin/activate
   ```
