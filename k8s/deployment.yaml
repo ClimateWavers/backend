@@ -22,5 +22,5 @@ spec:
           imagePullPolicy: Always
           name: backend
           ports:
-            - containerPort: 8000
+            - containerPort: 8001
               protocol: TCP
