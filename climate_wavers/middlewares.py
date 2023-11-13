@@ -27,10 +27,11 @@ class TokenVerificationMiddleware:
             if access_token or refresh_token:
                 # Verify tokens
                 try:
-                    token = ""
                     if refresh_token:
                         token = CustomToken.objects.get(refresh_token=refresh_token)
                     #if access token is not provided but refresh token is available
+                except Exception as e:
+                    token = access_token
                     if verify_access_token(access_token) is None and refresh_token == token.refresh_token:
                         try:
                             decoded_refresh_token = RefreshToken(token.refresh_token)
@@ -54,8 +55,8 @@ class TokenVerificationMiddleware:
                     # Verify access token, if available
                     elif verify_access_token(access_token) is None:
                         return JsonResponse({'detail': 'Invalid tokens'}, status=401)
-                    # If refresh and access token has been refreshed, verify and store refrwsh token
-                    elif refresh_token and refresh_token != token.refresh_token:
+                    # If refresh and access token has been refreshed, verify and store refresh token
+                    elif refresh_token and (token != "") and (refresh_token != token.refresh_token):
                         decoded_refresh_token = RefreshToken(refresh_token)
                         # Verify refresh token
                         decoded_refresh_token.verify()
