@@ -122,7 +122,7 @@ def register(request):
             user.save()
 
             # Generate a confirmation token for the user
-            user_id = str(user_id)
+            user_id = str(user.id)
             token = serializer.dumps(user.username)
             uid = urlsafe_base64_encode(force_bytes(user_id))
             # Build the confirmation URL
