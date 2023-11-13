@@ -27,6 +27,7 @@ class TokenVerificationMiddleware:
             if access_token or refresh_token:
                 # Verify tokens
                 try:
+                    token = ""
                     if refresh_token:
                         token = CustomToken.objects.get(refresh_token=refresh_token)
                     #if access token is not provided but refresh token is available
