@@ -62,6 +62,10 @@ class TokenVerificationMiddleware:
                         decoded_refresh_token.verify()
                         token.refresh_token = refresh_token
                         token.save()
+                        new_access_token = refresh_token.access_token
+                        # Save access token to request to send back to client
+                        request.access_token = str(new_access_token)
+                        access_token = str(new_access_token)
                     #Decode access token
                     decoded_acc_token = verify_access_token(access_token)
                     # Get user
