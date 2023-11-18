@@ -17,8 +17,12 @@ from itsdangerous import URLSafeTimedSerializer
 
 # Secret key to sign the confirmation token
 SECRET_KEY = os.getenv('SECRET_KEY')
+
+# Define a custom salt_chars without period
+salt_chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+
 # Create a serializer with the secret key and a salt value
-serializer = URLSafeTimedSerializer(SECRET_KEY)
+serializer = URLSafeTimedSerializer(SECRET_KEY, salt=salt_chars)
 
 
 @api_view(['GET'])
@@ -123,7 +127,8 @@ def register(request):
 
             # Generate a confirmation token for the user
             user_id = str(user.id)
-            token = serializer.dumps(user.username)
+            token = serializer.dumps(user.username, salt=salt_chars)
+            url_token = token.replace(".", "_")
             uid = urlsafe_base64_encode(force_bytes(user_id))
             # Build the confirmation URL
             domain = os.getenv("DOMAIN")
@@ -133,13 +138,13 @@ def register(request):
             confirmation_page = os.getenv("CONFIRMATION_PAGE")
             # Send a confirmation email
             subject = 'Confirm Your Registration'
-            message = f'{os.getenv("VERIFICATION_MAIL")} {confirmation_page}/{token}'
+            message = f'{os.getenv("VERIFICATION_MAIL")} {confirmation_page}/{url_token}'
             from_email = os.getenv("APP_EMAIL")  # Replace with your email
             recipient_list = [user.email]
 
             send_mail(subject, message, from_email, recipient_list)
 
-            return JsonResponse({'message': 'User registered. Confirmation email sent.', "id": user.id, "confirmation_url": confirmation_url, "token": token}, status=status.HTTP_201_CREATED)
+            return JsonResponse({'message': 'User registered. Confirmation email sent.', "id": user.id, "confirmation_url": confirmation_url, "token": url_token}, status=status.HTTP_201_CREATED)
         except Exception as e:
             logger.error(e)
             print(e)
@@ -156,23 +161,24 @@ def verify_user(request, user_id):
         user_id = str(user_id)
         if user.is_verified:
             return JsonResponse({"message": "User is verified, Sign in instead"})
-        token = serializer.dumps(user.username)
+        token = serializer.dumps(user.username, salt=salt_chars)
         uid = urlsafe_base64_encode(force_bytes(user_id))
         # Build the confirmation URL
         domain = os.getenv("DOMAIN")
+        url_token = token.replace(".", "_")
         confirmation_url = reverse('confirm-registration',
             kwargs={'uidb64': uid, 'token': token})
         confirmation_url = f'{domain}{confirmation_url}'
         confirmation_page = os.getenv("CONFIRMATION_PAGE")
             # Send a confirmation email
         subject = 'Confirm Your Registration'
-        message = f'{os.getenv("VERIFICATION_MAIL")} {confirmation_page}/{token}'
+        message = f'{os.getenv("VERIFICATION_MAIL")} {confirmation_page}/{url_token}'
         from_email = os.getenv("APP_EMAIL")  # Replace with your email
         recipient_list = [user.email]
 
         send_mail(subject, message, from_email, recipient_list)
 
-        return JsonResponse({'message': 'Confirmation email sent.', "id": user.id, "confirmation_url": confirmation_url, "token": token}, status=status.HTTP_201_CREATED)
+        return JsonResponse({'message': 'Confirmation email sent.', "id": user.id, "confirmation_url": confirmation_url, "token": url_token}, status=status.HTTP_201_CREATED)
     except Exception as e:
         logger.error(e)
         return JsonResponse({"message": str(e)}, status=status.HTTP_400_BAD_REQUEST)
@@ -701,7 +707,7 @@ def confirm_registration(request, uidb64, token):
         uid = force_text(urlsafe_base64_decode(uidb64))
         user = User.objects.get(pk=uid)
 
-        if serializer.loads(token, max_age=3600):
+        if serializer.loads(token, max_age=3600, salt=salt_chars):
             # Generate refresh tokens
             refresh_token = RefreshToken.for_user(user)
             user.is_active = True
@@ -769,7 +775,7 @@ def password_reset(request):
         if user is not None:
             # Generate a reset token for the user
             user_id = str(user.id)
-            token = serializer.dumps(user.username)
+            token = serializer.dumps(user.username, salt=salt_chars)
             uid = urlsafe_base64_encode(force_bytes(user_id))
 
             # Build the reset password URL
